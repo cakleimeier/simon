@@ -1,0 +1,228 @@
+/**************************
+***  Whole Body Styles  ***
+**************************/
+html{
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	text-align: center;
+	color: black;
+	font-family: Oswald;
+	font-size: 20px;
+}
+
+h6{
+	font-family: Oswald;
+	font-size: 1.25em;
+}
+
+h1, h2{
+	font-family: Sanchez;
+	font-size: 1.25em;
+	color: white;
+}
+
+h1{
+	font-size: 2em;
+}
+
+h1, .content h3{
+	color: #607D8B;
+	text-align: center;
+	margin: 0 0;
+}
+
+/**********************
+***  Board Buttons  ***
+**********************/
+
+/***** Buttons display two per line  *****/
+
+.square{
+  display: inline-block;
+  width: 40%;
+	padding: 3% 0;
+	overflow: visible;
+	font-size: 2em;
+  margin: 1% 4.5%;
+	border-radius: 90px;
+	cursor: pointer;
+	-webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+#one{
+	background-color: #F9690E;
+}
+
+#two{
+	background-color: #2ED3AF;
+}
+
+#three{
+	background-color: #2286C9;
+}
+
+#four{
+	 background-color: #8E44AD;
+}
+
+/*****************
+***  Controls  ***
+*****************/
+
+/***** Controls section displays block-level, top center of screen  *****/
+
+.controls{
+	display: inline-block;
+	width: 25%;
+	padding: 1% 1%;
+	margin: 1% 37.5%;
+	text-align: left;
+	border: 1px solid #263238;
+	color: #263238;
+	line-height: 1.25em;
+	border-radius: 20%;
+}
+
+.controls article{
+	display: block;
+	padding: 1.5% 2%;
+}
+
+.controls h6{
+	display: inline;
+}
+
+/*****  Status and Number are dynamic and emphasized   *****/
+
+#status, #number{
+	display: inline-block;
+	float: right;
+	border: 1px solid #607D8B;
+	width: 55%;
+	text-align: center;
+	color: #607D8B;
+	font-family: "Droid Sans";
+	-webkit-box-shadow: inset 1px 1px 3px 1px rgba(38,50,56,0.89);
+  -moz-box-shadow: inset 1px 1px 3px 1px rgba(38,50,56,0.89);
+  box-shadow: inset 1px 1px 3px 1px rgba(38,50,56,0.89);
+}
+
+/*****  Strict and Reset are interactive, display side by side *****/
+
+.strict label{
+	display: inline;
+	margin: 1% 30%;
+}
+
+.strict, .resetButton{
+	display: inline;
+	width: 40%;
+	padding: 0 0;
+	margin: 0 0;
+	float: left;
+	z-index: -1;
+}
+
+.tooltip{
+	display: none;
+}
+
+.resetButton{
+	float: right;
+	text-align: center;
+}
+
+/***** All buttons have same styling  *****/
+
+.resetButton button, button, #startBtn, #yes, #no, #mistakeBtn, #loseBtn, #winBtn{
+	font-family: Oswald;
+	font-size: 1em;
+	padding: 1% 5% 5% 5%;
+	background-color: #607D8B;
+	color: white;
+}
+
+/**********************
+***  Modal Windows  ***
+**********************/
+
+.window{
+	display: none;
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.5);
+}
+
+.content{
+	background-color: #fefefe;
+	margin: 5% auto;
+	border: 1px solid #888;
+	width: 70%;
+	text-align: center;
+	font-size: 2em;
+	padding: 2% 1%;
+}
+
+.content h3{
+	font-size: 1.8em;
+	font-weight: bold;
+	padding-bottom: 2%;
+}
+
+.content p{
+	padding: 2% 0;
+	font-size: .8em;
+	line-height: 1.2em;
+}
+
+
+/**********************
+***  Media Queries  ***
+**********************/
+
+/*
+
+verticallly center content box
+
+width: 700
+controls box needs to be wider
+reduce space between buttons
+make text smaller
+
+*/
+@media (max-width: 700px){
+	/* smaller text, wider "controls" box, less space between squares, smaller border radius on squares */
+	body{
+		font-size: 16px;
+	}
+	
+	.controls{
+		width: 60%;
+		margin: 2% 20%;
+	}
+	
+	.square{
+		margin: 1% 1%;
+		border-radius: 50px;
+	}
+}
+
+@media (max-width: 650px){
+	.content{
+		font-size: 1.3em;	
+		line-height: 2em;
+	}
+}
+
